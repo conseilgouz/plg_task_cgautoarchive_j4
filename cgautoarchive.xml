@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="4.1" type="plugin" group="task" method="upgrade">
+	<name>PLG_TASK_CGAUTOARCHIVE</name>
+	<author>conseilgouz</author>
+	<creationDate>2022 October</creationDate>
+	<copyright>Copyright (C) 2022 ConseilGouz. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
+	<authorUrl>www.conseilgouz.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_TASK_CGAUTOARCHIVE_DESC</description>
+	<files>
+		<filename plugin="cgautoarchive">cgautoarchive.php</filename>
+		<filename>index.html</filename>
+		<folder>forms</folder>
+	</files>
+	<languages>
+		<language tag="fr-FR">language/fr-FR/plg_task_cgautoarchive.ini</language>
+		<language tag="fr-FR">language/fr-FR/plg_task_cgautoarchive.sys.ini</language>
+		<language tag="en-GB">language/en-GB/plg_task_cgautoarchive.ini</language>
+		<language tag="en-GB">language/en-GB/plg_task_cgautoarchive.sys.ini</language>
+	</languages>
+	<scriptfile>script.php</scriptfile>
+	<changelogurl>https://raw.githubusercontent.com/conseilgouz/plg_task_cgautoarchive_j4/master/cgautoarchive_changelog.xml</changelogurl>
+	<updateservers>
+    <server type="extension" name="cgautoarchive" priority="1">https://raw.githubusercontent.com/conseilgouz/updates_github/master/plg_task_cgautoarchive_update.xml</server>
+   </updateservers>
+	
+</extension>
