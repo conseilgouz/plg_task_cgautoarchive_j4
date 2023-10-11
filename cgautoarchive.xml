@@ -2,12 +2,12 @@
 <extension version="4.1" type="plugin" group="task" method="upgrade">
 	<name>PLG_TASK_CGAUTOARCHIVE</name>
 	<author>conseilgouz</author>
-	<creationDate>2022 October</creationDate>
-	<copyright>Copyright (C) 2022 ConseilGouz. All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<creationDate>2023-10-11</creationDate>
+	<copyright>Copyright (C) 2023 ConseilGouz. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>pascal.leconte@conseilgouz.com</authorEmail>
 	<authorUrl>www.conseilgouz.com</authorUrl>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>PLG_TASK_CGAUTOARCHIVE_DESC</description>
 	<files>
 		<filename plugin="cgautoarchive">cgautoarchive.php</filename>

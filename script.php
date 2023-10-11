@@ -1,7 +1,7 @@
 <?php
 /**
-* CG Auto Archive Plugin  - Joomla 4.0.0 Module 
-* Version			: 1.0.0
+* CG Auto Archive Plugin  - Joomla 4.x/5.x plugin 
+* Version			: 1.0.1
 * copyright 		: Copyright (C) 2022 ConseilGouz. All rights reserved.
 * license    		: http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
 */
@@ -9,19 +9,21 @@
 defined('_JEXEC') or die;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
-use Joomla\CMS\Filesystem\Folder;
+use Joomla\Filesystem\Folder;
 use Joomla\CMS\Version;
-use Joomla\CMS\Filesystem\File;
+use Joomla\Filesystem\File;
+use Joomla\CMS\Log\Log;
 
 class plgtaskcgautoarchiveInstallerScript
 {
 	private $min_joomla_version      = '4.0.0';
-	private $min_php_version         = '7.2';
+	private $min_php_version         = '7.4';
 	private $name                    = 'Plugin CG AutoArchive';
 	private $exttype                 = 'plugin';
 	private $extname                 = 'cgautoarchive';
 	private $previous_version        = '';
 	private $dir           = null;
+	private $lang;
 	private $installerName = 'plgtaskcgautoarchiveinstaller';
 	public function __construct()
 	{
@@ -80,7 +82,7 @@ class plgtaskcgautoarchiveInstallerScript
 	        $db->execute();
         }
         catch (RuntimeException $e) {
-            JLog::add('unable to enable plugin cg autoarchive', JLog::ERROR, 'jerror');
+            Log::add('unable to enable plugin cg autoarchive', Log::ERROR, 'jerror');
         }
 
 	}
@@ -120,7 +122,7 @@ class plgtaskcgautoarchiveInstallerScript
 	}
 	private function uninstallInstaller()
 	{
-		if ( ! JFolder::exists(JPATH_PLUGINS . '/system/' . $this->installerName)) {
+		if ( ! is_dir(JPATH_PLUGINS . '/system/' . $this->installerName)) {
 			return;
 		}
 		$this->delete([
