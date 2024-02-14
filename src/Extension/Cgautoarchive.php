@@ -1,7 +1,7 @@
 <?php
 /** CG Auto Archive
 *
-* Version			: 2.0.0
+* Version			: 2.0.1
 * Package			: Joomla 4.x/5.x
 * copyright 		: Copyright (C) 2024 ConseilGouz. All rights reserved.
 * license    		: https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
@@ -71,12 +71,13 @@ class Cgautoarchive extends CMSPlugin implements SubscriberInterface
 		}
 		if (($params->task_choice == 'EOL') || ($params->task_choice == 'BOTH')) { 
 			$cats = $params->categories;
+			if (!is_array($cats)) $cats = [];
 			try {
 				$query = $db->getQuery(true);
 				$query->update("#__content")
 				->set('state =2')
 				->where('publish_up <= DATE_SUB(now(),INTERVAL '.$params->sqlinterval.' '.$params->sqldatetype.') AND state IN (0, 1)');
-				if (sizeOf($cats))	$query->where('catid in ('.implode(",",$cats).')');
+				if (sizeof($cats))	$query->where('catid in ('.implode(",",$cats).')');
 				$db->setQuery($query);
 				$db->execute();
 			}	catch ( RuntimeException $e ) {

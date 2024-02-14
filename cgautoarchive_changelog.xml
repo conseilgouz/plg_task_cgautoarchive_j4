@@ -3,6 +3,18 @@
 		<element>cgautoarchive</element>
 		<type>plugin</type>
 		<group>task</group>
+		<version>2.0.1</version>
+        <note>
+            <item>14/02/2024</item>
+        </note>
+        <fix>
+            <item>PHP error if category list is empty</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>task</group>
 		<version>2.0.0</version>
         <note>
             <item>14/02/2024</item>
