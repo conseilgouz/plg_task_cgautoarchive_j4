@@ -77,7 +77,7 @@ class Cgautoarchive extends CMSPlugin implements SubscriberInterface
 				$query->update("#__content")
 				->set('state =2')
 				->where('publish_up <= DATE_SUB(now(),INTERVAL '.$params->sqlinterval.' '.$params->sqldatetype.') AND state IN (0, 1)');
-				if (sizeof($cats))	$query->where('catid in ('.implode(",",$cats).')');
+				if (sizeOf($cats))	$query->where('catid in ('.implode(",",$cats).')');
 				$db->setQuery($query);
 				$db->execute();
 			}	catch ( RuntimeException $e ) {
