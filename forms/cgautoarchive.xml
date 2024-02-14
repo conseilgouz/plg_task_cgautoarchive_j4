@@ -2,6 +2,28 @@
 <form>
 	<fields name="params">
 		<fieldset name="task_params">
+			<field name="task_choice" type="radio" class="btn-group" default="PUBLISHED"
+			label="PLG_TASK_CGAUTOARCHIVE_CHOICE" description="PLG_TASK_CGAUTOARCHIVE_CHOICE_DESC">
+				<option value="PUBLISHED">PLG_TASK_CGAUTOARCHIVE_PUBLISHED</option> 
+				<option value="EOL">PLG_TASK_CGAUTOARCHIVE_EOL</option> 
+				<option value="BOTH">PLG_TASK_CGAUTOARCHIVE_BOTH</option> 
+			</field>
+			<field	showon="task_choice!:PUBLISHED" name="notegeneralinfo"	type="note" label="PLG_TASK_CGAUTOARCHIVE_SQL_NOTE" class="alert-success"/>
+
+			<field showon="task_choice!:PUBLISHED" name="categories" type="category"	multiple="true"	extension="com_content" 
+				label="PLG_TASK_CGAUTOARCHIVE_CAT" description="PLG_TASK_CGAUTOARCHIVE_CAT_DESC"
+				layout="joomla.form.field.list-fancy-select"/>
+			<field showon="task_choice!:PUBLISHED"
+				name="sqldatetype" type="list" label="PLG_TASK_CGAUTOARCHIVE_FIELD_SQLDATE" default="DAY">
+			<option value="DAY">PLG_TASK_CGAUTOARCHIVE_DAY</option>
+			<option value="MONTH">PLG_TASK_CGAUTOARCHIVE_MONTH</option>
+			<option value="YEAR">PLG_TASK_CGAUTOARCHIVE_YEAR</option>
+			</field>
+			<field showon="task_choice!:PUBLISHED"
+				name="sqlinterval" type="number" default='1' 
+				label="PLG_TASK_CGAUTOARCHIVE_INTERVAL"  description="PLG_TASK_CGAUTOARCHIVE_INTERVAL_DESC"
+			/>
+
 		</fieldset>
 	</fields>
 </form>

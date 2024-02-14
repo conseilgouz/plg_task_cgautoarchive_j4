@@ -17,7 +17,7 @@ use Joomla\CMS\Log\Log;
 class plgtaskcgautoarchiveInstallerScript
 {
 	private $min_joomla_version      = '4.0.0';
-	private $min_php_version         = '7.4';
+	private $min_php_version         = '8.0';
 	private $name                    = 'Plugin CG AutoArchive';
 	private $exttype                 = 'plugin';
 	private $extname                 = 'cgautoarchive';

@@ -3,6 +3,21 @@
 		<element>cgautoarchive</element>
 		<type>plugin</type>
 		<group>task</group>
+		<version>2.0.0</version>
+        <note>
+            <item>14/02/2024</item>
+        </note>
+        <change>
+            <item>Becomes a service provider</item>
+        </change>
+        <addition>
+            <item>Archive after article validity limit date has been reached</item>
+        </addition>
+	</changelog>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>task</group>
 		<version>1.0.1</version>
         <note>
             <item>11/10/2023</item>
