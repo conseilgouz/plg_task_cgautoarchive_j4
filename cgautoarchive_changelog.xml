@@ -3,6 +3,18 @@
 		<element>cgautoarchive</element>
 		<type>plugin</type>
 		<group>task</group>
+		<version>2.0.2</version>
+        <note>
+            <item>15/02/2024</item>
+        </note>
+        <fix>
+            <item>from 1.0.1 to 2.0.0 compatibility</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>task</group>
 		<version>2.0.1</version>
         <note>
             <item>14/02/2024</item>

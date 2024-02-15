@@ -1,7 +1,7 @@
 <?php
 /** CG Auto Archive
 *
-* Version			: 2.0.1
+* Version			: 2.0.2
 * Package			: Joomla 4.x/5.x
 * copyright 		: Copyright (C) 2024 ConseilGouz. All rights reserved.
 * license    		: https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
@@ -57,7 +57,7 @@ class Cgautoarchive extends CMSPlugin implements SubscriberInterface
 	protected function cgautoarchive(ExecuteTaskEvent $event): int {
 		$params    = $event->getArgument('params');
 		$db = Factory::getDbo();
-		if (($params->task_choice == 'PUBLISHED') || ($params->task_choice == 'BOTH')) { 
+		if (!isset($params->task_choice) || ($params->task_choice == 'PUBLISHED') || ($params->task_choice == 'BOTH')) { 
 			try {
 				$query = $db->getQuery(true);
 				$query->update("#__content")
