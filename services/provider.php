@@ -2,9 +2,8 @@
 
 /** CG Auto Archive
 *
-* Version			: 2.0.0
-* Package			: Joomla 4.x/5.x
-* copyright 		: Copyright (C) 2024 ConseilGouz. All rights reserved.
+* Package			: Joomla 4.x/5.x/6.x
+* copyright 		: Copyright (C) 2025 ConseilGouz. All rights reserved.
 * license    		: https://www.gnu.org/licenses/gpl-3.0.html GNU/GPL
 */
 \defined('_JEXEC') or die;

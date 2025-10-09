@@ -3,6 +3,18 @@
 		<element>cgautoarchive</element>
 		<type>plugin</type>
 		<group>task</group>
+		<version>2.1.0</version>
+        <note>
+            <item>09/10/2025</item>
+        </note>
+        <fix>
+            <item>Joomla 6.x compatibility</item>
+        </fix>
+	</changelog>
+	<changelog>
+		<element>cgautoarchive</element>
+		<type>plugin</type>
+		<group>task</group>
 		<version>2.0.2</version>
         <note>
             <item>15/02/2024</item>
